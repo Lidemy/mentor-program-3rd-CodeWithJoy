@@ -1,5 +1,9 @@
 function stars(n) {
-  console.log(n);
+  const arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push('*'.repeat(i));
+  }
+  return arr;
 }
 
-module.exports = stars;
+odule.exports = stars;
