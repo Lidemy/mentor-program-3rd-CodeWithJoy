@@ -6,4 +6,4 @@ function stars(n) {
   return arr;
 }
 
-odule.exports = stars;
+module.exports = stars;
