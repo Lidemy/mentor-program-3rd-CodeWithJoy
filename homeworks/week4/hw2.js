@@ -1,8 +1,8 @@
 const request = require('request');
-const process = require('process')
+const process = require('process');
 request('https://lidemy-book-store.herokuapp.com/books', function (error, response, body) {
     const data = JSON.parse(body);
-    let idNum = parseInt(process.argv[3]);
+    const idNum = parseInt(process.argv[3], 10);
     if (process.argv[2] === 'list') { // 印出前20本書
         for (let i = 0; i <= 19; i += 1) {
             console.log(data[i].id, data[i].name)

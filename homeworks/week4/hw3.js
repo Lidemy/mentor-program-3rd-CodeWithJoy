@@ -1,12 +1,12 @@
 const request = require('request');
 const process = require('process');
 
-let idNum = parseInt(process.argv[3]);
+const idNum = parseInt(process.argv[3], 10);
 
 if (process.argv[2] === 'list') {
     request('https://lidemy-book-store.herokuapp.com/books?_limit=20', function (error, status, body) {
         const data = JSON.parse(body);
-        data.map(e => { console.log(e.id, e.name) })
+        data.map((e) => { console.log(e.id, e.name) })
     })
 }
 
