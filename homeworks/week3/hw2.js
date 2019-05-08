@@ -1,19 +1,18 @@
-//1. map寫法
+// 1. map寫法
 function alphaSwap(str) {
   const arr = str.split('');
-  const newArr = arr.map(e => {
+  const newArr = arr.map((e) => {
     if (e === e.toUpperCase()) {
       return e.toLowerCase();
-    } else {
-      return e.toUpperCase();
     }
+    return e.toUpperCase();
   })
   return newArr.join('');
 }
 
 module.exports = alphaSwap;
 
-//2. for 迴圈的寫法
+// 2. for 迴圈的寫法
 /* function alphaSwap(str) {
   const arr = str.split('');
   const newArr = [];
