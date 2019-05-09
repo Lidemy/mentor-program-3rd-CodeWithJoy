@@ -7,13 +7,13 @@ function isPrime(n) {
     if (n % i === 0) {
       factorNum += 1;
     } else {
-      factorNum += 0
+      factorNum += 0;
     }
   }
   if (factorNum > 0) {
-    return false
+    return false;
   }
-  return true
+  return true;
 }
 
 module.exports = isPrime;

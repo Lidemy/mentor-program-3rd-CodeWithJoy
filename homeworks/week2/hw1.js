@@ -7,17 +7,14 @@ function printStars(n) {
 printStars(5);
 
 
-
-
-
-document.querySelector('.btn').addEventListener('click', showCode)
+document.querySelector('.btn').addEventListener('click', showCode);
 
 function showCode() {
   let result = '';
   function addAvailableChar(className, char) {
     let availableChar = '';
     if (document.querySelector(`.${className}`).checked) {
-      availableChar += char
+      availableChar += char;
     }
     return availableChar;
   }
