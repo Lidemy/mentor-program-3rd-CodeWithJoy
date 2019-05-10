@@ -6,7 +6,7 @@ function alphaSwap(str) {
       return e.toLowerCase();
     }
     return e.toUpperCase();
-  })
+  });
   return newArr.join('');
 }
 
