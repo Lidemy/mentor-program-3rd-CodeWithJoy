@@ -1,0 +1,178 @@
+body{
+    margin: 0;
+    color: #212f3c;
+    font-size: 16px;
+}
+
+nav{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    box-shadow:0px 4px rgba(220, 220, 226, 0.5);
+
+}
+.centerBlock{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width:85%;
+}
+
+.navWrap{
+    display: flex;
+
+}
+.mediumIcon{
+    width: 35px;
+    height: 35px;
+    padding-right: 15px;
+}
+
+.blogName{
+    width: 180px;
+    font-size:28px;
+    text-align:center;
+    margin-left: 5px;
+    border-left:1px solid grey;
+
+}
+
+.blogIcon{
+    display: none;
+}
+.navStart{
+        width: 105px;
+        height: 38px;
+    font-size:16px;
+        color: green;
+    border: 0.5px solid green;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.navLink{
+    font-size:16px;
+    color: green;
+    text-decoration:none;
+    text-align:center;
+    padding: 10px 8px;
+
+    align-items: center;
+}
+
+.sidebar{
+    position: fixed;
+    top: 150px;
+    left: 90px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sideImg {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 25px;
+    height: 25px;
+}
+.clapWrap{
+    display: flex;
+    position: relative;
+    left:11px;
+}
+.clapCount{
+    position: relative;
+    left: 3px;
+    top: 5px;
+}
+
+.article{       
+    max-width: 700px;
+    margin: auto;
+}
+
+.recommend{
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    background-color: #FAFAFA;
+    margin: auto;
+}
+.recArticle{
+    font-family: 'Lato', sans-serif;
+    margin: 0px 5px;
+    box-sizing: border-box;
+    max-width: 33%;
+    height: 280px;
+    box-shadow:0px 4px rgba(220, 220, 226, 0.5);
+    margin-top: 30px;
+}
+.recArticle>p{
+    font-size: 16px; 
+    margin: 4px;
+    
+}
+.recPic{
+    height: 100px;
+    width: 100%;
+}
+
+.author{
+    display: flex;
+    height: 88px;
+    align-items: flex-end;
+
+}
+.avatar{
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    margin-bottom: 18px;
+}
+
+.recClapWrap{
+    display: flex;
+    margin-left: 8px;
+}
+@media screen and (max-width: 960px){
+
+    .article{
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .sidebar{
+        display: none;
+    }
+
+
+    .blogName{
+        display: none;
+    }
+    .blogIcon{
+        display: block;
+        width: 35px;
+        height: 35px;
+        margin-left: 5px;
+    border-left:1px solid grey;
+    }
+}
+
+@media screen and (max-width: 740px){
+    
+    .centerBlock{
+        
+        width: 90%;
+    }
+.recommend{
+    display: block;
+    height: 600px;
+    background-color: #FAFAFA;
+    margin: auto;
+}
+.recArticle{
+    max-width: 90%;
+    margin: 10px auto;
+}
+}
