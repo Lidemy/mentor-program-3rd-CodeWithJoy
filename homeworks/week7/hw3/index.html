@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="show">0
+        </div>
+        <div class="buttonWrap">
+            <div class="num AC">AC</div>
+            <div class="numCal" style="display: flex; position: relative">
+                <div class="numWrap" style="display: flex; flex-wrap: wrap-reverse">
+                    <div class="num num1">1</div>
+                    <div class="num num2">2</div>
+                    <div class="num num3">3</div>
+                    <div class="num num4">4</div>
+                    <div class="num num5">5</div>
+                    <div class="num num6">6</div>
+                    <div class="num num7">7</div>
+                    <div class="num num8">8</div>
+                    <div class="num num9">9</div>
+                </div>
+                <div class="calWrap">
+                    <div class="cal num devide">/</div>
+                    <div class="cal num time">X</div>
+                    <div class="cal num minus">-</div>
+                    <div class="cal num plus">+</div>
+                </div>
+            </div>
+            <div class="bottomWrap">
+                <div class="num num0">0</div>
+                <div class="num point">.</div>
+                <div class="equal">=</div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    var total = [];
+    var showNum = [];
+    var show = document.querySelector('.show');
+
+    //數字按鍵& 小數點
+    for (let i = 0; i < 10; i++) {
+        document.querySelector('.num' + i).addEventListener('click', function () {
+            total.push(i);
+            showNum.push(i);
+            show.innerText = showNum.join("").toString();
+        })
+    }
+    document.querySelector('.point').addEventListener('click', function () {
+        total.push('.');
+        showNum.push('.');
+        show.innerText = showNum.join("").toString();
+    })
+
+    //加減乘除 
+    document.querySelector('.devide').addEventListener('click', function () {
+        total.push('/');
+        show.innerText = '';
+        showNum = [];
+    })
+
+    document.querySelector('.time').addEventListener('click', function () {
+        total.push('*');
+        show.innerText = '';
+        showNum = [];
+    })
+
+    document.querySelector('.minus').addEventListener('click', function () {
+        total.push('-');
+        show.innerText = '';
+        showNum = [];
+    })
+
+    document.querySelector('.plus').addEventListener('click', function () {
+        total.push('+');
+        show.innerText = '';
+        showNum = [];
+    })
+
+
+    //等於
+    document.querySelector('.equal').addEventListener('click', function () {
+        showNum = [];
+        console.log(total);
+        show.innerText = eval(total.join(""));
+        total = [];
+    })
+
+    //AC
+    document.querySelector('.AC').addEventListener('click', function () {
+        show.innerText = '0';
+        total = [];
+        showNum = [];
+        console.log(total);
+    })
+
+</script>
+<style>
+    body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 420px;
+        height: 310px;
+        border: solid black 1px;
+    }
+
+    .show {
+        width: 400px;
+        height: 68px;
+        margin: 10px;
+        border: solid black 1px;
+        font-size: 40px;
+        text-align: right;
+        font-weight: bold;
+        padding: 3px;
+        padding-top: 15px;
+        box-sizing: border-box
+    }
+
+    .buttonWrap {
+        position: relative;
+        left: 6px;
+    }
+
+    .numWrap {
+        width: 320px;
+    }
+
+    .num {
+        font-size: 20px;
+        width: 92px;
+        height: 34px;
+        margin: 3px 4px;
+        border: solid black 1px;
+        text-align: center
+    }
+
+    .cal {
+        margin: 6px;
+    }
+
+    .equal {
+        background-color: orange;
+        width: 194px;
+        height: 34px;
+        margin: 3px 4px;
+        border: solid black 1px;
+        text-align: center;
+    }
+
+    .calWrap {
+        position: absolute;
+        bottom: -3px;
+        right: 10px
+    }
+
+    .bottomWrap {
+        display: flex;
+    }
+</style>
+
+
+</html>

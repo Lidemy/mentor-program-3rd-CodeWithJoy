@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reaction Test</title>
+</head>
+
+<body style='height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column'>
+    <!---1vh = 1% viewport-->
+    <div style='font-size: 24px'>畫面變色時請點擊</div>
+    <br>
+    <button>再玩一次</button>
+</body>
+
+
+<script>
+    //畫面變色 ->startTime
+    //按click ->endTime 
+
+    let startTime, endTime;
+    document.addEventListener('click', endGame);
+    document.querySelector('button').addEventListener('click', changeColor);
+    changeColor();
+
+    function changeColor(e) {
+        document.querySelector('body').style.backgroundColor = 'white'
+        document.querySelector('button').style.visibility = 'hidden'
+        let randomTime = Math.random() * 10;
+        while (randomTime < 1 || randomTime > 3) {
+            randomTime = Math.random() * 10;
+
+        }
+
+        setTimeout(() => {
+            console.log(randomTime)
+            document.querySelector('body').style.backgroundColor = 'orange'
+            startTime = new Date();
+        }, randomTime * 1000); //ms為單位！
+        e.stopPropagation(); //addEventListener 第三參數，不傳或預設值為false，阻止事件冒泡。
+    }
+
+    function endGame(e) {
+        endTime = new Date();
+        var timeDiff = endTime - startTime; //in ms
+        // get seconds 
+        var seconds = (timeDiff / 1000).toFixed(2);
+        if (seconds === 'NaN') {
+            alert('還沒變色喔！失敗！');
+        } else {
+            alert('你的成績：' + seconds + " 秒");
+        }
+        document.querySelector('button').style.visibility = 'visible'
+        startTime = "NaN";
+    }
+
+
+
+
+
+
+</script>
+
+</html>
