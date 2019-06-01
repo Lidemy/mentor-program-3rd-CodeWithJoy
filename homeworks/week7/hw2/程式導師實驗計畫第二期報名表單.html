@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0061)file:///Users/wanglixin/hexschool/GoogleForm/googleForm.html? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>程式導師實驗計畫第二期報名表單</title>
-    <link rel="Form Icon" type="image/x-icon" href="./Google-Forms-icon.png" />
+    <link rel="Form Icon" type="image/x-icon" href="file:///Users/wanglixin/hexschool/GoogleForm/Google-Forms-icon.png">
     <style>
         body {
             margin: 0px;
@@ -29,7 +28,7 @@
             margin: auto;
             padding: 10px;
             position: relative;
-            top: -70px;
+            top: -30px;
             width: 480px;
             box-shadow: 0px 0px 8px 1px rgba(90, 90, 99, 0.5);
             border-top: solid 4px orange;
@@ -73,48 +72,20 @@
             background-color: #1973E8;
 
         }
-
-        .q1 {
-            width: 120px;
-            text-align: center;
-            background-color: #5E5E5E;
-            color: white;
-            font-size: 14px;
-            position: absolute;
-            left: 40px;
-            visibility: visible;
-            transition: all 0.2s linear;
-            bottom: 9px;
-        }
-
-        .q2 {
-            width: 120px;
-            text-align: center;
-            background-color: #5E5E5E;
-            color: white;
-            font-size: 14px;
-            position: absolute;
-            visibility: visible;
-            position: absolute;
-            visibility: hidden;
-            left: 20px;
-            bottom: 9px;
-        }
     </style>
 </head>
 
 <body>
     <div class="upPicture">
     </div>
-    <div class="container slider">
+    <div class="container">
         <h1>程式導師實驗計畫第二期報名表單</h1>
-        <p style="font-size: 12px; line-height:24px;">詳情請參考：<a target="_blank"
-                href="https://medium.com/hulis-blog/mentor-program-s2-f876c4e13d3b">https://medium.com/hulis-blog/mentor-program-s2-f876c4e13d3b</a>
+        <p style="font-size: 12px; line-height:24px;">詳情請參考：<a target="_blank" href="https://medium.com/hulis-blog/mentor-program-s2-f876c4e13d3b">https://medium.com/hulis-blog/mentor-program-s2-f876c4e13d3b</a>
             填完之後請務必按照文章內的說明再寄信給我，才算報名成功喔</p>
 
         <div style="color: red">*必填</div>
 
-        <form action="">
+        <form action="file:///Users/wanglixin/hexschool/GoogleForm/googleForm.html?">
             <div class="mainQ ">
                 <p class="star question">電子郵件地址</p>
                 <p class="example"></p>
@@ -154,52 +125,49 @@
             </div>
 
 
-            <input type="submit" class="submitBtn" value="提交" />
+            <input type="submit" class="submitBtn" value="提交">
         </form>
         <p style="color: gray; font-size: 10px;"> 請勿利用 Google 表單送出密碼。</p>
     </div>
 
-    <div
-        style="color: gray; font-size: 14px; margin: auto; width: 480px; text-align: center; position: relative; top: -30px">
-        Google 並未認可或建立這項內容。 <a href="">檢舉濫用情形</a> -
-        <a href="">服務條款</a></div>
-    <div
-        style="color: gray; font-size: 14px; margin: auto; margin-bottom: 100px; width: 480px; text-align: center; padding-top:10px">
-        Google
+    <div style="color: gray; font-size: 10px; margin: auto; width: 480px; text-align: center">Google 並未認可或建立這項內容。 <a href="file:///Users/wanglixin/hexschool/GoogleForm/googleForm.html?">檢舉濫用情形</a> -
+        <a href="file:///Users/wanglixin/hexschool/GoogleForm/googleForm.html?">服務條款</a></div>
+    <div style="color: gray; font-size: 14px; margin: auto; width: 480px; text-align: center; padding-top:10px">Google
         表單
     </div>
-    <div class='qq' style="position: fixed; left:5px; bottom: 5px">
-        <div id="questionBtn" style="color: #F3F0E7">向Google回報問題</div>
-        <img class="questionImg" src="./question-btn.png" alt="question button" style="width:20px; height: 20px;" />
+    <div style="position: fixed; left:5px; bottom: 5px">
+        <img class="questionImg" src="file:///Users/wanglixin/hexschool/GoogleForm/question-btn.png" alt="question button" style="width:20px; height: 20px;">
+        <div class="questionBtn" style="display: none">
+            向Google回報問題</div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            for (let i = 1; i <= 5; i++) {
-                document.querySelector('.Q' + i).addEventListener('blur', function () {
-                    if (document.querySelector('.Q' + i).value !== "") {
-                        console.log('ok');
-                        document.querySelector('.Q' + i).parentNode.removeAttribute("style", "background-color:#FCE8E6;");
-                        document.querySelector('.Q' + i).nextElementSibling.setAttribute("style", "visibility: hidden");
-                    } else {
-                        document.querySelector('.Q' + i).parentNode.setAttribute("style", "background-color:#FCE8E6;"); //增加inline元素
-                        document.querySelector('.Q' + i).nextElementSibling.setAttribute("style", "visibility: visible; color: red");
-                    }
-                })
+
+
+
+<script>
+    for (let i = 1; i <= 5; i++) {
+        document.querySelector('.Q' + i).addEventListener('blur', function () {
+            if (document.querySelector('.Q' + i).value !== "") {
+                console.log('ok');
+                document.querySelector('.Q' + i).parentNode.removeAttribute("style", "background-color:#FCE8E6;");
+                document.querySelector('.Q' + i).nextElementSibling.setAttribute("style", "visibility: hidden");
+            } else {
+                document.querySelector('.Q' + i).parentNode.setAttribute("style", "background-color:#FCE8E6;"); //增加inline元素
+                document.querySelector('.Q' + i).nextElementSibling.setAttribute("style", "visibility: visible; color: red");
             }
 
-            document.querySelector('.qq').addEventListener('mouseover', function () {
-                document.querySelector('#questionBtn').setAttribute("class", "q1")
-            })
-            document.querySelector('.qq').addEventListener('mouseleave', function () {
-                document.querySelector('#questionBtn').setAttribute("class", "q2")
-                //非常重要的一點！！！父元素監聽 or id綁定元素！
-                //由於id是唯一值，所以可以死死綁在EventLister上 ('#questionBtn')
-                //但如果你是用('.questionBtn')，每次新增or移除class原來的EventListener就覺得不是同一個東東，所以綁定會失效
-            })
+        })
 
-        })//結尾
-    </script>
-</body>
+    }
+
+    document.querySelector('.questionImg').addEventListener('mouseover', function () {
+        document.querySelector('.questionBtn').setAttribute('style', 'display: block')
+    })
+    document.querySelector('.questionImg').addEventListener('mouseleave', function () {
+        document.querySelector('.questionBtn').setAttribute('style', 'display: none')
+    })
 
 
-</html>
+
+</script>
+
+</body></html>
